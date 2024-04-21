@@ -89,91 +89,6 @@ div .content{
     text-align: center;
   }
 
-  /*矢印設定*/
-  .arrows {
-    position: relative;
-    display: block;
-    width: 100px;
-    margin: auto;
-    padding-top: 20px;
-    bottom: -70vh;
-    background-color: #ffe23c00;
-  }
-  .arrows path {
-    stroke: #ffffff;
-    fill: transparent;
-    stroke-width: 3px;
-    animation: arrow 6s infinite;
-    -webkit-animation: arrow 6s infinite;
-  }
-  @keyframes arrow {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes arrow /*Safari and Chrome*/ {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  .arrows path.a1 {
-    animation-delay: -1s;
-    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
-  }
-  .arrows path.a2 {
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
-  }
-  .arrows path.a3 {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
-  }
-
-  /* 簡易リセットCSS */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* スライダー全体 */
-  /*
-.vertical-slider {
-  width: 100%;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-*/
-  /* スライド */
-  /*
-.vertical-slider__slide {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e9e9e9f1;
-}
-*/
-
   /*セクション共通設定*/
   div .sec_container {
     width: 100%;
@@ -205,48 +120,9 @@ div .content{
   div .sec_1 .sec_title {
     padding: 100px 30px 30px 30px;
   }
-
-  div .QB {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  div .QB:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    background: url("../images/mitamamochi/QUANTUMBASE-1_3.jpg") no-repeat
-      center; /*背景画像設定※オリジナル画像を設定してください*/
-    background-size: cover;
-    /*
-  border-top-right-radius: 700px 500px;
-  border-top-left-radius: 700px 500px;
-  border-bottom-right-radius: 700px 500px;
-  border-bottom-left-radius: 700px 500px;
-  */
-  }
-
-  div .QB_text {
-    position: relative;
-    width: 800px;
-    margin: 20px auto;
-    bottom: -80%;
-    color: #ffffff;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 20px;
-    line-height: 1.7; /*行間*/
-    letter-spacing: 2px;
-    text-align: center; /*文章の揃え*/
-    background-color: #3f09a300;
-  }
-
   /*Concept of Projectセクション設定*/
   div .sec_2 {
-    background-image: url(../images/mitamamochi/ArcHorizon-s2.png);
+    background-image: url(../images/);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 99%;
@@ -256,9 +132,7 @@ div .content{
     padding: 30px;
     padding-left: 20%;
   }
-  div .Project {
-    background-color: #00000054;
-  }
+
   div .sec_2_theme {
     position: relative;
     width: 100%;
@@ -269,14 +143,6 @@ div .content{
     letter-spacing: 7px;
     text-align: center;
     background-color: #ccb32500;
-  }
-  div .symbol {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-    background-color: #b0b30700;
-    text-align: center;
   }
   div .Pro_text {
     position: relative;
@@ -294,7 +160,7 @@ div .content{
 
   /*Foumulatorセクション設定*/
   div .sec_3 {
-    background-image: url(../images/sample/spaceship\ corridor\ sketch\,\ Helio\ Frazao_1.jpg);
+    background-image: url(../images/);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 99%;
@@ -435,23 +301,9 @@ div .content{
     border-top: 1px;
     border-right: 1px;
     border-bottom: 1px;
-    border-color: linear-gradient(
-      0deg,
-      rgba(128, 247, 255, 0.685) 0%,
-      rgba(114, 248, 237, 0.555) 25%,
-      rgba(124, 242, 255, 0.5) 50%,
-      rgba(129, 255, 226, 0.205) 75%,
-      rgba(123, 252, 241, 0.199) 100%
-    );
     justify-content: center;
   }
 
-  div .GaNASiS {
-    position: relative;
-    margin: auto;
-    background-color: #000000;
-    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
-  }
   div .info_wrapper {
     position: relative;
     display: flex;
@@ -460,14 +312,6 @@ div .content{
     height: 500px;
     margin: auto;
     padding: 10px;
-    background-color: linear-gradient(
-      0deg,
-      rgba(13, 185, 197, 0.685) 0%,
-      rgba(0, 184, 168, 0.473) 25%,
-      rgba(0, 174, 194, 0.233) 50%,
-      rgba(129, 255, 226, 0.144) 75%,
-      rgba(123, 252, 241, 0) 100%
-    );
     justify-content: space-around;
     align-content: space-around;
   }
@@ -625,7 +469,7 @@ div .content{
   }
   div .data_img img:hover {
     transform: scale(1.2, 1.2);
-    transform: all 0.5s;
+    transition: all 0.5s;
   }
 
   div .data_text {
@@ -815,51 +659,10 @@ div .content{
     padding-top: 40px;
     left: 0px;
   }
-  div .QB {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  div .QB:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    background: url("../images/mitamamochi/QUANTUMBASE-1_3.jpg") no-repeat
-      center; /*背景画像設定※オリジナル画像を設定してください*/
-    background-size: cover;
-    /*
-  border-top-right-radius: 700px 500px;
-  border-top-left-radius: 700px 500px;
-  border-bottom-right-radius: 700px 500px;
-  border-bottom-left-radius: 700px 500px;
-  */
-  }
-
-  div .QB_text {
-    position: relative;
-    width: 800px;
-    margin: 20px auto;
-    bottom: -80%;
-    color: #ffffff;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 20px;
-    line-height: 1.7; /*行間*/
-    letter-spacing: 2px;
-    text-align: center; /*文章の揃え*/
-    background-color: #3f09a300;
-  }
-
-  div .arrows {
-    opacity: 90%;
-  }
 
   /*PeojectD.A.S.Q.セクション設定*/
   div .sec_2 {
-    background-image: url(../images/mitamamochi/ArcHorizon-s2.png);
+    background-image: url(../images/);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 99%;
@@ -884,19 +687,6 @@ div .content{
     text-align: center;
     background-color: #ccb32500;
   }
-  div .symbol {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-    left: 0px;
-    background-color: #b0b30700;
-    text-align: center;
-  }
-  div .symbol img {
-    width: 250px;
-    height: auto;
-  }
   div .Pro_text {
     position: relative;
     display: flex;
@@ -916,7 +706,7 @@ div .content{
 
   /*FOUMULATORセクション設定*/
   div .sec_3 {
-    background-image: url(../images/sample/Red\ matter\ \,\ Vladimir\ Manyukhin_1.png);
+    background-image: url(../images/);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 99%;
@@ -1047,22 +837,7 @@ div .content{
     border-top: 1px;
     border-right: 1px;
     border-bottom: 1px;
-    border-color: linear-gradient(
-      0deg,
-      rgba(128, 247, 255, 0.685) 0%,
-      rgba(114, 248, 237, 0.555) 25%,
-      rgba(124, 242, 255, 0.5) 50%,
-      rgba(129, 255, 226, 0.205) 75%,
-      rgba(123, 252, 241, 0.199) 100%
-    );
   }
-  div .GaNASiS {
-    position: relative;
-    margin: auto;
-    background-color: #000000;
-    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
-  }
-
   div .info_wrapper {
     position: relative;
     display: flex;
@@ -1072,14 +847,6 @@ div .content{
     margin: auto;
     padding: 10px;
     top: -600px;
-    background-color: linear-gradient(
-      0deg,
-      rgba(13, 185, 197, 0.685) 0%,
-      rgba(0, 184, 168, 0.473) 25%,
-      rgba(0, 174, 194, 0.233) 50%,
-      rgba(129, 255, 226, 0.144) 75%,
-      rgba(123, 252, 241, 0) 100%
-    );
     justify-content: space-around;
     align-content: space-around;
   }
@@ -1244,7 +1011,7 @@ div .content{
   }
   div .data_img img:hover {
     transform: scale(1.2, 1.2);
-    transform: all 0.5s;
+    transition: all 0.5s;
   }
 
   div .data_text {
@@ -1262,4 +1029,5 @@ div .content{
     background-color: #01192400;
   }
 }
+
 /*-------------------------------------------------------------------------------------*/
