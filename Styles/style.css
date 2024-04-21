@@ -1,0 +1,1265 @@
+/**/
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  color: rgb(197, 197, 197);
+}
+
+body {
+  background-color: #cacaca;
+  font-family: "Arial", "Helvetica", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*scrollbar-width: none;*/
+}
+
+body a {
+  /*body内のリンク*/
+  color: #2063c9;
+  text-decoration: none;
+  transition: 0.5s;
+}
+body a:hover {
+  color: #b5343f;
+  transition: 0.5s;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  background: rgba(119, 0, 0, 0.699);
+}
+
+article {
+  width: auto;
+  height: auto;
+  margin: 0px 0px;
+  padding: 0px;
+  min-width: 400px;
+  align-items: center; /*記事を中心に配置*/
+  background-color: rgb(0, 0, 0);
+}
+
+section {
+  width: 100%;
+  margin: auto;
+  background-color: #0a1410d3;
+  align-items: center;
+}
+
+/*
+div .content{
+  width: auto;
+  height: auto;
+  margin: 0px 0px;
+  padding: 0px;
+  min-width: 400px;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+*/
+
+/*/////////////////////////PC, タブレットサイズ版////////////////////////*/
+@media screen and (min-width: 768px) {
+  h1 {
+    margin: 0px auto;
+    padding: 20px;
+    font-size: 30px;
+    font-family: "Melete", sans-serif;
+    background-color: #ff0e0e00;
+    color: #e6fdff;
+    text-align: left;
+  }
+  h2 {
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  h3 {
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: rgba(40, 58, 66, 0.959);
+    text-align: center;
+  }
+
+  /*矢印設定*/
+  .arrows {
+    position: relative;
+    display: block;
+    width: 100px;
+    margin: auto;
+    padding-top: 20px;
+    bottom: -70vh;
+    background-color: #ffe23c00;
+  }
+  .arrows path {
+    stroke: #ffffff;
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 6s infinite;
+    -webkit-animation: arrow 6s infinite;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+  }
+  .arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+  }
+  .arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+  }
+
+  /* 簡易リセットCSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* スライダー全体 */
+  /*
+.vertical-slider {
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+*/
+  /* スライド */
+  /*
+.vertical-slider__slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e9e9e9f1;
+}
+*/
+
+  /*セクション共通設定*/
+  div .sec_container {
+    width: 100%;
+    background-color: #26ffc900;
+    z-index: 1;
+  }
+
+  div .sec_wrapper {
+    width: auto;
+    margin: auto;
+    background-color: #0a0a00de;
+  }
+  .sec_title {
+    width: 1920px;
+    background-color: #d81f1f00;
+  }
+
+  /*QUANTUM BASEセクション設定*/
+  div .sec_1 {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.5047123015873016) 0%,
+      rgba(1, 5, 22, 0.363) 50%,
+      rgba(0, 0, 0, 0.5047123015873016) 100%
+    );
+    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
+    opacity: 90%;
+  }
+  div .sec_1 .sec_title {
+    padding: 100px 30px 30px 30px;
+  }
+
+  div .QB {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  div .QB:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/mitamamochi/QUANTUMBASE-1_3.jpg") no-repeat
+      center; /*背景画像設定※オリジナル画像を設定してください*/
+    background-size: cover;
+    /*
+  border-top-right-radius: 700px 500px;
+  border-top-left-radius: 700px 500px;
+  border-bottom-right-radius: 700px 500px;
+  border-bottom-left-radius: 700px 500px;
+  */
+  }
+
+  div .QB_text {
+    position: relative;
+    width: 800px;
+    margin: 20px auto;
+    bottom: -80%;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.7; /*行間*/
+    letter-spacing: 2px;
+    text-align: center; /*文章の揃え*/
+    background-color: #3f09a300;
+  }
+
+  /*Concept of Projectセクション設定*/
+  div .sec_2 {
+    background-image: url(../images/mitamamochi/ArcHorizon-s2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 99%;
+    /*background-attachment:fixed;*/
+  }
+  div .sec_2 .sec_title {
+    padding: 30px;
+    padding-left: 20%;
+  }
+  div .Project {
+    background-color: #00000054;
+  }
+  div .sec_2_theme {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 7px;
+    text-align: center;
+    background-color: #ccb32500;
+  }
+  div .symbol {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background-color: #b0b30700;
+    text-align: center;
+  }
+  div .Pro_text {
+    position: relative;
+    width: 680px;
+    margin: auto;
+    padding: 50px;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.7; /*行間*/
+    letter-spacing: 2px;
+    text-align: center; /*文章の揃え*/
+    background-color: #5117bd00;
+  }
+
+  /*Foumulatorセクション設定*/
+  div .sec_3 {
+    background-image: url(../images/sample/spaceship\ corridor\ sketch\,\ Helio\ Frazao_1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 99%;
+  }
+  div .sec_3 .sec_title {
+    padding-top: 50px;
+    padding-left: 40%;
+  }
+  div .sec_3_theme {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    padding: 5px;
+    top: 20px;
+    left: -450px;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 7px;
+    text-align: left;
+    background-color: #ccb32500;
+  }
+
+  div .double_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1800px;
+    margin: auto;
+    background-color: #15afca00;
+  }
+  div .Fou_text {
+    position: relative;
+    width: 900px;
+    margin: auto;
+    top: -50px;
+    padding: 40px;
+    left: 0px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 20px;
+    line-height: 2.2; /*行間*/
+    letter-spacing: 2px;
+    text-align: left; /*文章の揃え*/
+    background-color: #59691200;
+  }
+  div .sign_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 800px;
+    height: 700px;
+    margin: auto;
+    left: 0px;
+    background-color: #033a1b00;
+  }
+  div .item {
+    width: 350px;
+    height: 300px;
+    margin: auto;
+    padding: 5px;
+    background-color: #000000d8;
+    border: 1px #00b193a6 solid;
+  }
+  div .item a {
+    color: #000000d8;
+  }
+  div .item a:hover {
+    color: #00b193a6;
+  }
+  div .item img {
+    display: block;
+    width: 240px;
+    height: 240px;
+    margin: auto;
+    justify-content: center;
+    opacity: 80%;
+  }
+  div .item .Fou_Code {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-family: "Melete", sans-serif;
+    text-align: center;
+  }
+  div .Fou_Profile {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    top: -150px;
+    left: 400px;
+  }
+  div .Fou_Profile a {
+    width: 300px;
+    height: 80px;
+    margin: auto;
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #edfff959;
+    color: #d32d6d;
+    background-color: #000a01ab;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+  div .Fou_Profile a:hover {
+    color: #000000;
+    background-color: #eb2a43cc;
+  }
+
+  /*ここからINFORMATIONの設定*/
+  div .sec_4 {
+    z-index: 1;
+    background-color: #000000;
+    padding-bottom: 50px;
+    opacity: 99%;
+  }
+
+  div .sec_4 .sec_title {
+    padding-top: 0px;
+    padding-left: 60%;
+    background-color: #cf1c1c00;
+  }
+
+  div .info_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1800px;
+    height: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #960a7300;
+    border-style: solid;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: linear-gradient(
+      0deg,
+      rgba(128, 247, 255, 0.685) 0%,
+      rgba(114, 248, 237, 0.555) 25%,
+      rgba(124, 242, 255, 0.5) 50%,
+      rgba(129, 255, 226, 0.205) 75%,
+      rgba(123, 252, 241, 0.199) 100%
+    );
+    justify-content: center;
+  }
+
+  div .GaNASiS {
+    position: relative;
+    margin: auto;
+    background-color: #000000;
+    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
+  }
+  div .info_wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+    background-color: linear-gradient(
+      0deg,
+      rgba(13, 185, 197, 0.685) 0%,
+      rgba(0, 184, 168, 0.473) 25%,
+      rgba(0, 174, 194, 0.233) 50%,
+      rgba(129, 255, 226, 0.144) 75%,
+      rgba(123, 252, 241, 0) 100%
+    );
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  div .info_wrapper a {
+    color: #ffffff;
+  }
+  div .info_wrapper a:hover {
+    background-color: #7acece;
+    transition: all 0.5s;
+  }
+
+  div .info_article {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 800px;
+    height: 100px;
+    margin: auto;
+    padding: 5px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-top: rgb(255, 255, 255);
+    border-right: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+    background-color: #0f2b2e67;
+  }
+  .day {
+    display: inline-block;
+    font-size: 30px;
+    width: 100px;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    background-color: #00000000;
+  }
+  .year {
+    font-size: 20px;
+  }
+  .category {
+    display: inline-block;
+    width: 100px;
+    margin: 5px;
+    padding-left: 0px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    background-color: #69696900;
+  }
+  .info_text {
+    display: inline-block;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5; /*行間*/
+    letter-spacing: 1px;
+    background-color: #c2c2c200;
+  }
+
+  div .info_Profile {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    top: -20px;
+    left: 400px;
+  }
+
+  div .info_Profile a {
+    width: 300px;
+    height: 80px;
+    margin: auto;
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #edfff959;
+    color: #0dc1ce;
+    background-color: #000a01ab;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+
+  div .info_Profile a:hover {
+    color: #000000;
+    background-color: #18d1ffdc;
+  }
+
+  /*ここからANALYSIS設定*/
+  div .sec_5 {
+    background-color: #000303ea;
+    padding-bottom: 50px;
+    opacity: 99%;
+  }
+
+  div .sec_5 .sec_title {
+    padding: 30px;
+    padding-left: 80%;
+    text-align: right;
+  }
+
+  div .data_container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1800px;
+    height: 750px;
+    margin: 60px auto;
+    padding: 50px 5px;
+    left: -80px;
+    background-color: #0fac4b00;
+    border-style: solid;
+    border-right: 1px;
+    border-left: 1px;
+    border-color: rgba(93, 94, 102, 0.322);
+    justify-content: center;
+  }
+  div .data_wrapper {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    align-content: space-around;
+    background-color: #8f020200;
+  }
+  div .data_title {
+    width: auto;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    color: #888888;
+    font-size: 24px;
+    font-family: "Melete", sans-serif;
+    letter-spacing: 1px;
+    background-color: #0aca5a00;
+  }
+  div .data_img {
+    height: 380px;
+    margin: 10px auto;
+    background-color: #86d40a00;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  div .data_img img {
+    width: 380px;
+    height: 380px;
+    transition: all 0.5s;
+  }
+  div .data_img img:hover {
+    transform: scale(1.2, 1.2);
+    transform: all 0.5s;
+  }
+
+  div .data_text {
+    width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.5; /*行間*/
+    background-color: #01192400;
+  }
+
+  .intro-button p {
+    position: relative;
+    display: inline-block;
+    top: -150px;
+    left: 1200px;
+    margin: 0px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 2px;
+    background-color: #0eac92a4;
+  }
+  .intro-button a:hover {
+    font-size: 20px;
+    transition: 0.5s;
+    color: #d309c293;
+  }
+  .intro-button .arrows {
+    position: relative;
+    left: 1300px;
+    top: -130px;
+  }
+
+  .section_news_station {
+    position: relative;
+  }
+  .vertical-slider__slide:nth-child(3) div .n-s_title {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 100px auto; /*文字の位置をこれで最終調整*/
+    padding: 20px;
+    top: 100px;
+    letter-spacing: 3px;
+    color: rgba(211, 214, 212, 0.959);
+    background-color: #88181800;
+  }
+
+  .section_theater {
+    position: relative;
+  }
+  .vertical-slider__slide:nth-child(4) .t-title {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 100px auto; /*文字の位置をこれで最終調整*/
+    padding: 20px;
+    top: 100px;
+    letter-spacing: 3px;
+    color: rgba(211, 214, 212, 0.959);
+    background-color: #88181800;
+  }
+
+  .vertical-slider__slide:nth-child(6) {
+    background-color: #0e3a0b;
+  }
+  .vertical-slider__slide:nth-child(7) {
+    background-color: #a5845a;
+  }
+}
+
+/*////////////////////////////スマートフォン版//////////////////////////*/
+@media (max-width: 760px) {
+  h1 {
+    margin: 0px auto;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Melete", sans-serif;
+    background-color: #ff0e0e00;
+    color: #e6fdff;
+    text-align: left;
+  }
+  h2 {
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  h3 {
+    margin: 0px 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: rgba(40, 58, 66, 0.959);
+    text-align: center;
+  }
+  div .sec_container {
+    width: 100%;
+    background-color: #00000000;
+    z-index: 1;
+  }
+
+  div .sec_wrapper {
+    width: auto;
+    margin: auto;
+    background-color: #bbbe0900;
+  }
+  .sec_title {
+    width: 760px;
+    background-color: #d81f1f00;
+  }
+
+  .arrows {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    left: 250px;
+    top: 125px;
+    background-color: #ffe23c00;
+  }
+  .arrows path {
+    stroke: #4c76ff;
+    fill: transparent;
+    stroke-width: 2px;
+    animation: arrow 6s infinite;
+    -webkit-animation: arrow 6s infinite;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+  }
+  .arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+  }
+  .arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+  }
+
+  /*QUANTUM BASEセクション設定*/
+  div .sec_1 {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.5047123015873016) 0%,
+      rgba(1, 5, 22, 0.363) 50%,
+      rgba(0, 0, 0, 0.5047123015873016) 100%
+    );
+    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
+    opacity: 90%;
+  }
+  div .sec_1 .sec_title {
+    padding-top: 40px;
+    left: 0px;
+  }
+  div .QB {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  div .QB:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("../images/mitamamochi/QUANTUMBASE-1_3.jpg") no-repeat
+      center; /*背景画像設定※オリジナル画像を設定してください*/
+    background-size: cover;
+    /*
+  border-top-right-radius: 700px 500px;
+  border-top-left-radius: 700px 500px;
+  border-bottom-right-radius: 700px 500px;
+  border-bottom-left-radius: 700px 500px;
+  */
+  }
+
+  div .QB_text {
+    position: relative;
+    width: 800px;
+    margin: 20px auto;
+    bottom: -80%;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 20px;
+    line-height: 1.7; /*行間*/
+    letter-spacing: 2px;
+    text-align: center; /*文章の揃え*/
+    background-color: #3f09a300;
+  }
+
+  div .arrows {
+    opacity: 90%;
+  }
+
+  /*PeojectD.A.S.Q.セクション設定*/
+  div .sec_2 {
+    background-image: url(../images/mitamamochi/ArcHorizon-s2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 99%;
+    /*background-attachment:fixed;*/
+  }
+  div .sec_2 .sec_title {
+    padding-top: 30px;
+  }
+
+  div .Project {
+    background-color: #0000003a;
+    justify-content: center;
+  }
+  div .sec_2_theme {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #ccb32500;
+  }
+  div .symbol {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    left: 0px;
+    background-color: #b0b30700;
+    text-align: center;
+  }
+  div .symbol img {
+    width: 250px;
+    height: auto;
+  }
+  div .Pro_text {
+    position: relative;
+    display: flex;
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    top: -30px;
+    left: 0px;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 10px;
+    line-height: 1.4; /*行間*/
+    letter-spacing: 2px;
+    text-align: center; /*文章の揃え*/
+    background-color: #5117bd00;
+  }
+
+  /*FOUMULATORセクション設定*/
+  div .sec_3 {
+    background-image: url(../images/sample/Red\ matter\ \,\ Vladimir\ Manyukhin_1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 99%;
+  }
+  div .sec_3 .sec_title {
+    padding: 30px;
+  }
+  div .sec_3_theme {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    background-color: #ccb32500;
+  }
+
+  div .double_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    background-color: #15afca00;
+  }
+  div .Fou_text {
+    position: relative;
+    width: 66%;
+    margin: auto;
+    padding: 40px;
+    left: 0px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 10px;
+    line-height: 1.4; /*行間*/
+    letter-spacing: 2px;
+    text-align: center; /*文章の揃え*/
+    background-color: #59691200;
+  }
+  div .sign_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 10px;
+    background-color: #033a1b00;
+  }
+  div .item {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding: 5px;
+    background-color: #00050493;
+  }
+  div .item img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    justify-content: center;
+    opacity: 90%;
+  }
+  div .item .Fou_Code {
+    position: relative;
+    font-size: 6px;
+    letter-spacing: 0px;
+    font-family: "Melete", sans-serif;
+    text-align: center;
+  }
+  .Fou_btn {
+    margin: 20px auto;
+  }
+  div .Fou_Profile {
+    position: relative;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #78ca0d00;
+  }
+  div .Fou_Profile a {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #edfff959;
+    color: #d32d6d;
+    background-color: #000a01ab;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+  div .Fou_Profile a:hover {
+    color: #000000;
+    background-color: #eb2a43cc;
+  }
+
+  /*ここからINFORMATIONの設定*/
+  div .sec_4 {
+    background-color: #000000;
+    padding-bottom: 50px;
+    opacity: 99%;
+  }
+
+  div .sec_4 .sec_title {
+    padding: 50px;
+    background-color: #cf1c1c00;
+  }
+
+  div .info_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #960a7300;
+    border-style: solid;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: linear-gradient(
+      0deg,
+      rgba(128, 247, 255, 0.685) 0%,
+      rgba(114, 248, 237, 0.555) 25%,
+      rgba(124, 242, 255, 0.5) 50%,
+      rgba(129, 255, 226, 0.205) 75%,
+      rgba(123, 252, 241, 0.199) 100%
+    );
+  }
+  div .GaNASiS {
+    position: relative;
+    margin: auto;
+    background-color: #000000;
+    box-shadow: inset 0 0 50px 50px rgb(0, 0, 0);
+  }
+
+  div .info_wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    top: -600px;
+    background-color: linear-gradient(
+      0deg,
+      rgba(13, 185, 197, 0.685) 0%,
+      rgba(0, 184, 168, 0.473) 25%,
+      rgba(0, 174, 194, 0.233) 50%,
+      rgba(129, 255, 226, 0.144) 75%,
+      rgba(123, 252, 241, 0) 100%
+    );
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  div .info_wrapper a {
+    color: #ffffff;
+  }
+  div .info_wrapper a:hover {
+    background-color: #7acece;
+    transition: all 0.5s;
+  }
+
+  div .info_article {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 5px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-top: rgb(255, 255, 255);
+    border-right: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+    background-color: #087e8b67;
+  }
+  .day {
+    display: inline-block;
+    font-size: 30px;
+    width: 50px;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+    background-color: #00000000;
+  }
+  .year {
+    font-size: 15px;
+  }
+  .category {
+    display: inline-block;
+    width: 50px;
+    margin: 5px;
+    padding-left: 0px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #69696900;
+  }
+  .info_text {
+    display: inline-block;
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 10px;
+    line-height: 1.4; /*行間*/
+    letter-spacing: 1px;
+    background-color: #c2c2c200;
+  }
+  .info_btn {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    top: -500px;
+    background-color: #96212100;
+  }
+  div .info_Profile {
+    position: relative;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div .info_Profile a {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    top: -600px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #edfff959;
+    color: #0dc1ce;
+    background-color: #000a01ab;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+  }
+  div .info_Profile a:hover {
+    color: #000000;
+    background-color: #18d1ffdc;
+  }
+
+  /*ここからANALYSIS設定*/
+  div .sec_5 {
+    background-color: #000303ea;
+    padding-bottom: 50px;
+    opacity: 99%;
+  }
+
+  div .sec_5 .sec_title {
+    padding: 50px;
+  }
+
+  div .data_container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #0fac4b00;
+    border-style: solid;
+    border-right: 1px;
+    border-left: 1px;
+    border-color: rgba(93, 94, 102, 0.322);
+    justify-content: center;
+  }
+  div .data_wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: #8f020200;
+  }
+  div .data_title {
+    position: relative;
+    display: flex;
+    width: 700px;
+    height: auto;
+    margin: 0px auto;
+    padding-top: 10px;
+    color: #888888;
+    font-size: 15px;
+    font-family: "Melete", sans-serif;
+    letter-spacing: 1px;
+    background-color: #0aca5a00;
+  }
+  div .data_img {
+    position: relative;
+    margin: 10px auto;
+    background-color: #86d40a00;
+    text-align: center;
+    overflow: hidden;
+    left: 250px;
+  }
+
+  div .data_img img {
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+  }
+  div .data_img img:hover {
+    transform: scale(1.2, 1.2);
+    transform: all 0.5s;
+  }
+
+  div .data_text {
+    position: relative;
+    display: flex;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    left: -220px;
+    text-align: center;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.4; /*行間*/
+    background-color: #01192400;
+  }
+}
+/*-------------------------------------------------------------------------------------*/
